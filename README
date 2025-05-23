@@ -16,7 +16,7 @@ To test the `uds_over_ip.cpp` implementation using `socat`, follow these steps:
 
 1. Start a UNIX domain socket server using `socat`:
     ```bash
-    socat -v UNIX-LISTEN:/tmp/uds_socket -
+    socat -d -d UNIX-LISTEN:/tmp/uds_socket STDOUT
     ```
 
 2. In another terminal, run the compiled `uds_over_ip` program and ensure it connects to the `/tmp/uds_socket` UNIX domain socket.
