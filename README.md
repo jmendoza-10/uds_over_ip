@@ -23,7 +23,7 @@ To test the `uds_over_ip.cpp` implementation using `socat`, follow these steps:
 
 3. Use `socat` to simulate a client sending/receiving data to the server:
     ```bash
-    socat -d -d STDIO UNIX-CONNECT:/tmp/uds_socket
+    socat STDIO TCP:localhost:8080
     ```
 
 4. Observe the output in both the `uds_over_ip` program and the `socat` server terminal to verify the communication.
